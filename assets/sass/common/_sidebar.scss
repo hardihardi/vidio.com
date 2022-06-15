@@ -1,0 +1,269 @@
+/*--------------------------------------------------------------
+8. Sidebar
+----------------------------------------------------------------*/
+.screen-reader-text {
+  display: none;
+}
+
+.cs-sidebar {
+  padding: 30px 0;
+}
+
+.cs-sidebar_widget_title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  margin-left: -20px;
+  margin-right: -20px;
+  line-height: 24px;
+  &::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    left: 0;
+    top: 2px;
+  }
+}
+
+.cs-sidebar.cs-type1 {
+  .cs-sidebar_widget_title {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    &:after {
+      left: initial;
+      right: 0;
+    }
+  }
+}
+
+.cs-recent_posts {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.cs-sidebar_item {
+  padding: 0px 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 1.6em;
+
+    ul {
+      padding-left: 16px;
+    }
+  }
+}
+.cs-sidebar_item,
+.cs-footer_widget {
+  select {
+    border: 1px solid #efeff9;
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.textwidget {
+  font-size: 16px;
+
+  strong {
+    font-weight: 500;
+    color: $primary;
+  }
+}
+
+.searchform {
+  position: relative;
+
+  &:after {
+    content: "\f002";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    border-radius: 3px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+  }
+
+  input#searchsubmit {
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border-radius: 3px;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    background-color: #000;
+    transition: all 0.3s ease;
+
+    &:hover {
+      opacity: 0.1;
+    }
+  }
+
+  input#s {
+    border-radius: 5px;
+    height: 45px;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    padding: 0 0;
+    font-size: 16px;
+    padding: 8px 75px 8px 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.cs-recent_posts {
+  .cs-recent_post {
+    display: flex;
+    align-items: center;
+  }
+
+  .cs-recent_post_thumb {
+    height: 80px;
+    width: 90px;
+    flex: none;
+    margin-right: 20px;
+    border-radius: 0;
+    overflow: hidden;
+
+    &:hover {
+      .cs-recent_post_thumb_in {
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  .cs-recent_post_date {
+    font-size: 15px;
+    line-height: 1.6em;
+    margin-bottom: 0px;
+  }
+
+  .cs-recent_post_title {
+    font-size: 18px;
+    line-height: 1.2em;
+    margin: 0;
+
+    a {
+      display: block;
+    }
+  }
+
+  .cs-recent_post_thumb_in {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: #e7e8fd;
+    transition: all 0.3s ease;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+
+  a {
+    font-size: 16px !important;
+    border-radius: 3px;
+    padding: 4px 20px;
+    display: inline-flex;
+    justify-content: center;
+    line-height: 1.6em;
+    margin: 5px;
+    font-weight: 400;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.cs-sidebar_item.widget_categories,
+.cs-sidebar_item.widget_archive,
+.cs-sidebar_item.widget_pages,
+.cs-sidebar_item.widget_meta,
+.cs-sidebar_item.widget_nav_menu {
+  ul ul {
+    margin-top: 6px;
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  a {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      content: "";
+      height: 1px;
+      background-color: currentColor;
+      width: 100%;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      transform-origin: right center;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scaleX(0);
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+        transform-origin: left center;
+        transform: scaleX(1);
+      }
+    }
+
+    &:before {
+      content: "\f105";
+      font-weight: 900;
+      font-family: "Font Awesome 5 Free";
+      margin-right: 8px;
+      position: relative;
+      top: 1px;
+    }
+  }
+}

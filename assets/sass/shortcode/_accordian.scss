@@ -1,0 +1,174 @@
+/*--------------------------------------------------------------
+16. Accordian
+----------------------------------------------------------------*/
+.cs-faq.cs-style1 {
+  font-size: 32px;
+
+  .cs-faq_title {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.cs-accordians.cs-style1 {
+  .cs-accordian {
+    transition: all 0.3s ease;
+    box-shadow: 0px 10px 60px 0px rgba(33, 28, 26, 0.1);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &.active {
+      border-radius: 0 0 5px 5px;
+
+      .cs-accordian_head {
+        box-shadow: 0px 1px 2px 0px rgba(2, 0, 124, 0.1);
+        border-radius: 0 5px 0px 0;
+      }
+
+      .cs-accordian_toggle {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .cs-accordian_head {
+    cursor: pointer;
+    position: relative;
+    border-left-width: 3px;
+    border-left-style: solid;
+    padding: 20px 64px 20px 35px;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .cs-accordian_title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .cs-accordian_toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 5px;
+    border: 1px solid $border;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    i {
+      transition: all 0.3s ease;
+    }
+  }
+
+  .cs-accordian-body {
+    padding: 25px 35px;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.cs-accordians.cs-style2 {
+  .cs-accordian {
+    transition: all 0.3s ease;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(38, 70, 83, 0.1);
+    }
+
+    &.active {
+      .cs-accordian_toggle {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .cs-accordian_head {
+    position: relative;
+    padding: 25px 40px 26px 77px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cs-accordian_title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .cs-accordian_toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    position: absolute;
+    left: 0px;
+    top: 27px;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      border: 9px solid #fff;
+      border-left: none;
+      border-right: none;
+      left: 0;
+      top: 0;
+      position: absolute;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    i {
+      transition: all 0.3s ease;
+    }
+  }
+
+  .cs-accordian-body {
+    padding: 1px 40px 20px 80px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-accordians.cs-style2 .cs-accordian_head {
+    padding: 20px 40px 20px 40px;
+  }
+  .cs-accordians.cs-style2 .cs-accordian_toggle {
+    top: 23px;
+  }
+  .cs-accordians.cs-style2 .cs-accordian-body {
+    padding: 1px 40px 20px 40px;
+  }
+  .cs-accordians.cs-style1 {
+    .cs-accordian_title {
+      font-size: 18px;
+    }
+    .cs-accordian-body {
+      padding: 15px 20px;
+    }
+    .cs-accordian_head {
+      border-left-width: 2px;
+      padding: 15px 50px 15px 20px;
+    }
+    .cs-accordian_toggle {
+      height: 32px;
+      width: 32px;
+      font-size: 16px;
+    }
+  }
+}

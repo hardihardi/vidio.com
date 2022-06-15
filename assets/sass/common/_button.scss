@@ -1,0 +1,434 @@
+/*--------------------------------------------------------------
+4. Button
+----------------------------------------------------------------*/
+.cs-btn.cs-style1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6em;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.55em 2.4em;
+
+  &.cs-btn_lg {
+    font-size: 111%;
+    padding: 0.65em 2.5em;
+    min-width: 190px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.cs-btn.cs-style2,
+.cs-btn.cs-style5 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5em;
+  color: $white;
+  padding: 15px 40px 15px;
+  border-radius: 10px;
+  position: relative;
+  outline: none;
+  border: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: inherit;
+    opacity: 0.5;
+    z-index: -1;
+    transition: all 0.4s ease;
+  }
+
+  &.cs-btn_lg {
+    font-size: 111%;
+  }
+}
+
+.cs-btn.cs-style5 {
+  &:after {
+    top: 6px;
+    left: 6px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    &:after {
+      top: -6px;
+    }
+  }
+}
+
+.cs-btn.cs-style2 {
+  &:after {
+    top: 0px;
+    left: 0px;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+
+    &:after {
+      top: 6px;
+      left: 6px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+.cs-btn.cs-style3 {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.2em;
+
+  .cs-btn_text {
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: currentColor;
+      bottom: 0;
+    }
+
+    &:after {
+      content: "";
+      height: 2px;
+      background-color: currentColor;
+      width: 100%;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      transform-origin: right center;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scaleX(0);
+    }
+  }
+
+  .cs-btn_icon {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    .cs-btn_text {
+      &:after {
+        opacity: 1;
+        transform-origin: left center;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &.cs-btn_lg {
+    font-size: 111%;
+    line-height: 1.5em;
+  }
+
+  &.cs-btn_md {
+    font-size: 18px;
+    line-height: 1.2em;
+  }
+}
+
+.cs-btn.cs-style4 {
+  padding: 15px 35px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 35px;
+  text-align: left;
+  text-transform: uppercase;
+  border-width: 1px;
+  border-style: solid;
+  position: relative;
+  box-shadow: 0px 10px 40px 0px rgba(1, 0, 50, 0.15);
+
+  .cs-btn_icon {
+    font-size: 35px;
+    margin-right: 15px;
+  }
+
+  .cs-btn_subtext {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 4px;
+  }
+
+  .cs-btn_text {
+    line-height: 1.1em;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: rgba($primary, 0.15);
+    transition: inherit;
+    opacity: 0;
+  }
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+.cs-btn.cs-style6 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6em;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-width: 1px;
+  border-style: solid;
+
+  .cs-btn_icon {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    font-size: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .cs-btn_text {
+    display: inline-flex;
+    padding: 10px 30px;
+  }
+  &.cs-rounded {
+    .cs-btn_icon {
+      border-radius: 50%;
+    }
+  }
+
+  &.cs-btn_lg {
+    font-size: 111%;
+
+    .cs-btn_icon {
+      width: 44px;
+      height: 44px;
+      margin-right: 8px;
+      position: relative;
+    }
+
+    .cs-btn_text {
+      padding: 13px 30px;
+    }
+  }
+}
+
+.cs-btn.cs-style7 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6em;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 11px 40px;
+  position: relative;
+  border: none;
+  outline: none;
+}
+
+// Player Button
+.cs-player_btn.cs-style1 {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: relative;
+  // border-width: 1px;
+  // border-style: solid;
+  &:hover {
+    .cs-player_btn_in {
+      &:after {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .cs-player_btn_in {
+    border-radius: 50%;
+    position: relative;
+    i {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  &.cs-btn_md {
+    .cs-player_btn_in {
+      font-size: 14px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}
+
+.cs-player_btn.cs-style2 {
+  height: 110px;
+  width: 110px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: absolute;
+  top: 160px;
+  left: -55px;
+
+  .cs-player_btn_in {
+    height: 62px;
+    width: 62px;
+    display: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    border-radius: 50%;
+    font-size: 22px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border-radius: inherit;
+      animation: rotation 1.5s infinite linear;
+    }
+  }
+  &:hover {
+    .cs-player_btn_in {
+      &::after {
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.cs-video_animaiton {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease;
+
+  span {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    animation: video_animaion1 2s linear infinite;
+    box-shadow: 0 0 0 1px currentColor;
+  }
+}
+
+@keyframes video_animaion1 {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  25% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-player_btn.cs-style2 {
+    top: initial;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+  }
+  .cs-btn.cs-style5:after {
+    top: 4px;
+    left: 4px;
+  }
+  .cs-btn.cs-style2,
+  .cs-btn.cs-style5 {
+    padding: 11px 30px;
+  }
+  .cs-btn.cs-style1 {
+    padding: 0.5em 1.5em;
+  }
+  .cs-btn.cs-style1.cs-btn_lg {
+    padding: 0.56em 1.8em;
+    min-width: 160px;
+  }
+  .cs-btn.cs-style6.cs-btn_lg .cs-btn_text {
+    padding: 10px 20px;
+    font-size: 100%;
+  }
+  .cs-player_btn.cs-style1 {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-btn.cs-style1.cs-btn_lg {
+    min-width: 160px;
+    padding: 0.6em 1.8em;
+  }
+  .cs-btn.cs-style4 {
+    min-width: 180px;
+  }
+  .cs-btn.cs-style3.cs-btn_lg {
+    font-size: 100%;
+  }
+  .cs-btn.cs-style6 .cs-btn_icon {
+    display: none;
+  }
+  .cs-btn.cs-style4 {
+    min-width: 170px;
+    padding: 10px 20px;
+
+    .cs-btn_icon {
+      font-size: 32px;
+      margin-right: 8px;
+    }
+  }
+}

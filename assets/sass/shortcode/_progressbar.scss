@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+34. Progressbar
+----------------------------------------------------------------*/
+.cs-progressbar_wrap.cs-style1 {
+  .cs-progressbar_title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-bottom: 28px;
+  }
+
+  .cs-progressbar.cs-style1:not(:last-child) {
+    margin-bottom: 26px;
+  }
+}
+
+.cs-progressbar.cs-style1 {
+  .cs-progress {
+    border-radius: 4px;
+    height: 8px;
+  }
+
+  .cs-progress_in {
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  .cs-progressbar_head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .cs-progressbar_text,
+  .cs-progressbar_percentage {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+  }
+}

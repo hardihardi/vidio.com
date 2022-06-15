@@ -1,0 +1,124 @@
+/*--------------------------------------------------------------
+23. Event
+----------------------------------------------------------------*/
+.cs-event.cs-style1 {
+  padding: 30px 40px 25px;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .cs-avatar {
+    height: 70px;
+    width: 70px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    img {
+      height: 100%;
+      width: 100px;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+  .cs-avatar_group {
+    margin-bottom: 10px;
+    display: flex;
+  }
+  .cs-avatar:not(:first-child) {
+    margin-left: -25px;
+  }
+  .cs-posted_by {
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      margin-left: 8px;
+      &:not(:last-child) {
+        &::after {
+          content: ",";
+        }
+      }
+    }
+  }
+  .cs-event_title {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  .cs-event_details {
+    font-size: 16px;
+    line-height: 1.6em;
+    margin-bottom: 22px;
+  }
+  .cs-event_location {
+    display: flex;
+    align-items: center;
+  }
+  .cs-event_location_icon {
+    height: 36px;
+    width: 36px;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  .cs-event_location_title {
+    margin: 0;
+    font-size: 20px;
+  }
+  .cs-event_toggle_body {
+    padding-top: 18px;
+    display: none;
+  }
+  .cs-event_toggle_btn {
+    font-size: 16px;
+    border: none;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    i {
+      transition: inherit;
+    }
+    &.active {
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-event.cs-style1 {
+    padding: 20px 20px 15px;
+  }
+  .cs-event.cs-style1 .cs-event_title {
+    font-size: 24px;
+  }
+  .cs-event.cs-style1 .cs-event_toggle_btn {
+    height: 32px;
+    width: 32px;
+    right: 20px;
+    top: 20px;
+  }
+  .cs-event.cs-style1 .cs-posted_by > * {
+    margin-left: 4px;
+  }
+}
+
+.cs-event.cs-style1 {
+  padding: 15px 12px 15px;
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  .cs-event_toggle_btn {
+    right: 15px;
+  }
+  .cs-avatar {
+    height: 50px;
+    width: 50px;
+    border-width: 1px;
+    &:not(:first-child) {
+      margin-left: -15px;
+    }
+  }
+}

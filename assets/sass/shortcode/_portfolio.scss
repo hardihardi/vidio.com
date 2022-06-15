@@ -1,0 +1,316 @@
+/*--------------------------------------------------------------
+31. Portfolio
+----------------------------------------------------------------*/
+.cs-portfolio.cs-style1 {
+  position: relative;
+  background-color: #f5f5fd;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+  display: block;
+
+  .cs-portfolio_hover_bg {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .cs-portfolio_thumb {
+    height: 370px;
+    width: 100%;
+    border-radius: inherit;
+    box-shadow: 0px 5px 20px 0px rgba(1, 0, 98, 0.05);
+  }
+
+  .cs-portfolio_title {
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: $white;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-skip-ink: none;
+    box-shadow: 0px 20px 80px 0px rgba(1, 0, 98, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.15);
+    transition: all 0.4s ease;
+  }
+
+  &:hover {
+    .cs-portfolio_hover_bg {
+      opacity: 0.6;
+    }
+
+    .cs-portfolio_title {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+  }
+
+  &.cs-color1 {
+    background-color: $white;
+  }
+
+  &.cs-size1 {
+    .cs-portfolio_thumb {
+      height: 465px;
+    }
+  }
+}
+
+.row.cs-portfolio_col-lg-3 .cs-portfolio.cs-style1 .cs-portfolio_title {
+  font-size: 16px;
+  min-height: 60px;
+  padding: 10px 15px;
+}
+
+.cs-portfolio.cs-style2 {
+  display: block;
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+
+  .cs-portfolio_thumb {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .cs-portfolio_info {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    padding: 30px 0 65px;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .cs-portfolio_title {
+    color: $white;
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+
+  .cs-portfolio_subtitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgba($white, 0.8);
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    .cs-portfolio_thumb {
+      transform: scale(1.08);
+    }
+
+    .cs-portfolio_info {
+      opacity: 1;
+      padding-bottom: 35px;
+    }
+  }
+
+  &.cs-left-space {
+    margin-left: 35px;
+  }
+
+  &.cs-right-space {
+    margin-right: 35px;
+  }
+  &.cs-size1 {
+    height: 500px;
+  }
+  &.cs-size2 {
+    height: 550px;
+  }
+  &.cs-size3 {
+    height: 520px;
+  }
+  &.cs-size4 {
+    height: 450px;
+  }
+}
+.cs-portfolio.cs-style3 {
+  display: block;
+  position: relative;
+  .cs-portfolio_title {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    font-size: 20px;
+    background-color: rgb(255, 220, 94);
+    box-shadow: 0px 10px 40px 0px rgba(32, 27, 7, 0.1);
+    line-height: 1.2em;
+    padding: 13px 30px;
+  }
+  &.cs-type1 {
+    .cs-portfolio_title {
+      opacity: 0;
+      left: 20px;
+      transition: all 0.4s ease;
+    }
+    img {
+      width: 100%;
+    }
+    &:hover {
+      .cs-portfolio_title {
+        opacity: 1;
+        left: 0px;
+      }
+    }
+  }
+}
+
+.cs-portfolio.cs-style4 {
+  display: flex;
+
+  .cs-portfolio_info {
+    position: relative;
+  }
+
+  .cs-portfolio_img {
+    height: 610px;
+    width: 580px;
+    box-shadow: 0px 30px 80px 0px rgba(30, 27, 55, 0.2);
+    flex: none;
+    border-radius: 25px 25px 5px 5px;
+    background-position: top center;
+  }
+
+  .cs-portfolio_info_in {
+    background-color: #1e1b37;
+    height: calc(100% - 140px);
+    margin-top: 90px;
+    padding: 75px 80px;
+  }
+
+  .cs-portfolio_subtitle {
+    font-size: 16px;
+    margin-bottom: 3px;
+    line-height: 1.6em;
+  }
+
+  .cs-portfolio_title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .cs-portfolio_description {
+    margin-bottom: 30px;
+  }
+
+  .cs-portfolio_shape {
+    height: 150px;
+    width: 150px;
+    background-image: radial-gradient(currentColor 15%, transparent 15%);
+    background-size: 10px 10px;
+    background-position: 0 0;
+    top: 35px;
+    position: absolute;
+    left: -25px;
+    z-index: -1;
+  }
+}
+
+.cs-portfolio.cs-style4 {
+  .cs-portfolio_img {
+    position: relative;
+    left: 100px;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+}
+
+.slick-slide.slick-active {
+  .cs-portfolio.cs-style4 {
+    .cs-portfolio_img {
+      left: 0px;
+      opacity: 1;
+      transition-delay: 0.5s;
+    }
+  }
+}
+////////
+
+.slick-slide {
+  .cs-portfolio.cs-style3 .cs-portfolio_title {
+    transition: all 0.5s ease;
+    opacity: 0;
+    margin-left: 70px;
+  }
+  &.slick-active {
+    .cs-portfolio.cs-style3 .cs-portfolio_title {
+      opacity: 1;
+      margin-left: 0;
+      transition-delay: 0.4s;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-portfolio.cs-style2.cs-left-space {
+    margin-left: 0;
+  }
+  .cs-portfolio.cs-style2.cs-right-space {
+    margin-right: 0;
+  }
+  .cs-portfolio.cs-style4 {
+    flex-direction: column;
+    .cs-portfolio_img {
+      height: 400px;
+      width: 100%;
+    }
+    .cs-portfolio_info_in {
+      height: initial;
+      margin-top: 0;
+      padding: 45px 40px 50px;
+    }
+    .cs-portfolio_title {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    .cs-portfolio_description {
+      margin-bottom: 25px;
+    }
+    .cs-portfolio_shape {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-portfolio.cs-style2 {
+    height: 450px;
+  }
+  .cs-portfolio.cs-style3:not(.cs-type1) {
+    width: 350px;
+  }
+  .cs-portfolio.cs-style4 {
+    .cs-portfolio_img {
+      height: 350px;
+    }
+    .cs-portfolio_info_in {
+      padding: 35px 30px 40px;
+    }
+  }
+}

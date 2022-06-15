@@ -1,0 +1,575 @@
+/*--------------------------------------------------------------
+15. Footer
+----------------------------------------------------------------*/
+.cs-footer_item {
+  margin-bottom: 30px;
+}
+
+.cs-footer_newsletter.cs-style1 {
+  .cs-footer_newsletter_form {
+    max-width: 500px;
+    margin: auto;
+    width: 100%;
+    position: relative;
+  }
+
+  .cs-footer_newsletter_input {
+    width: 100%;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    height: 50px;
+    font-size: 16px;
+    box-shadow: 0px 1px 2px 0px rgba(1, 0, 94, 0.1);
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #918f9d;
+    }
+
+    &:-ms-input-placeholder {
+      color: #918f9d;
+    }
+
+    &::placeholder {
+      color: #918f9d;
+    }
+  }
+
+  .cs-footer_newsletter_btn {
+    position: absolute;
+    border: none;
+    width: 65px;
+    height: 40px;
+    top: 5px;
+    right: 5px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+    transition: all 0.3s ease;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.cs-size_lg {
+    .cs-footer_newsletter_input {
+      padding: 10px 30px;
+      padding-right: 200px;
+      border-radius: 35px;
+      height: 60px;
+      font-size: 18px;
+    }
+
+    .cs-footer_newsletter_btn {
+      width: initial;
+      padding: 5px 50px;
+      height: 50px;
+      border-radius: 30px;
+    }
+  }
+}
+.cs-footer.cs-style1,
+.cs-footer.cs-style4,
+.cs-shop_sidebar.cs-style1 {
+  .menu,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ul {
+      padding-left: 16px;
+      margin-top: 10px;
+    }
+
+    li {
+      i {
+        font-size: 16px;
+        margin-right: 12px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: "";
+        height: 1px;
+        background-color: currentColor;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        transform-origin: right center;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scaleX(0);
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+          transform-origin: left center;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+.cs-footer.cs-style1 {
+  position: relative;
+  border-radius: 200px 200px 0 0;
+
+  .cs-cta.cs-style1 {
+    margin-top: -175px;
+  }
+
+  .cs-widget_title {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .cs-copyright {
+    font-size: 111%;
+    line-height: 1.4em;
+    padding: 31px 0;
+  }
+
+  &.cs-type1 {
+    .cs-widget_title {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.cs-footer.cs-style2 {
+  font-size: 16px;
+  line-height: 1.6em;
+
+  .cs-copyright {
+    padding: 22px 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .menu {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+
+    li:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  .cs-copyright_in,
+  .menu {
+    margin: 6px 0;
+  }
+
+  .cs-footer_item {
+    margin-bottom: 0;
+  }
+
+  .cs-footer_newsletter.cs-style1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 107px 0;
+
+    .cs-footer_newsletter_form {
+      max-width: 360px;
+      margin: 10px 0;
+    }
+
+    .cs-footer_newsletter_input {
+      background-color: #fff;
+      box-shadow: 0px 15px 60px 0px rgba(1, 0, 94, 0.15);
+
+      &::-webkit-input-placeholder {
+        color: #9190a3;
+      }
+
+      &:-ms-input-placeholder {
+        color: #9190a3;
+      }
+
+      &::placeholder {
+        color: #9190a3;
+      }
+    }
+
+    .cs-footer_newsletter_title {
+      font-size: 48px;
+      margin: 10px 60px 10px 0;
+    }
+  }
+}
+
+.cs-footer.cs-style3 {
+  .cs-widget_title {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+
+  .menu,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.4em;
+
+    ul {
+      padding-left: 16px;
+      margin-top: 10px;
+    }
+
+    li {
+      i {
+        font-size: 16px;
+        margin-right: 12px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .menu {
+    a {
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        content: "\f105\f105";
+        font-weight: 900;
+        font-size: 16px;
+        font-family: "Font Awesome 5 Free";
+        margin-right: 8px;
+        overflow: hidden;
+        width: 8px;
+        display: inline-block;
+        line-height: 16px;
+        position: relative;
+        top: 2px;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        &:before {
+          width: 16px;
+        }
+      }
+    }
+  }
+
+  .cs-footer_newsletter.cs-style1 {
+    padding-top: 7px;
+    .cs-footer_newsletter_input {
+      padding: 10px 20px;
+      box-shadow: 0px 10px 40px 0px rgba(10, 44, 17, 0.1);
+      border-radius: 3px;
+      height: 45px;
+    }
+
+    .cs-footer_newsletter_btn {
+      width: 75px;
+      height: 45px;
+      top: 0;
+      right: 0;
+      border-radius: 23px 3px 3px 23px;
+      cursor: pointer;
+      padding: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  .cs-social_btns.cs-style1 {
+    padding-top: 7px;
+    color: #b1aa90;
+    a {
+      border-radius: 50%;
+      margin-right: 10px;
+      height: initial;
+      width: initial;
+      background-color: transparent;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .cs-text_widgert_content {
+    img {
+      margin-top: 7px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.cs-footer.cs-style4 {
+  position: relative;
+
+  .cs-widget_title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .cs-copyright-wrap {
+    padding-left: 45%;
+    margin-top: -80px;
+    height: 80px;
+  }
+
+  .cs-copyright {
+    border-width: 0;
+    border-top-width: 1px;
+    border-style: solid;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .cs-address_widgert {
+    padding-bottom: 43px;
+    position: relative;
+    margin-bottom: 0;
+
+    .cs-footer_logo {
+      margin-bottom: 44px;
+      position: relative;
+      z-index: 1;
+    }
+
+    ul {
+      position: relative;
+      z-index: 1;
+
+      li {
+        position: relative;
+        padding-left: 40px;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+
+      i {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .cs-footer_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .cs-footer_col {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 1;
+    padding-bottom: 120px;
+    padding-top: 135px;
+    position: relative;
+
+    &:first-child {
+      flex: 2;
+      margin-right: 100px;
+      padding-bottom: 0;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 101vw;
+        right: 0px;
+        top: 0;
+        background-color: rgba($black, 0.04);
+      }
+    }
+  }
+
+  .cs-footer_item {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.cs-footer.cs-dark_footer {
+  background-color: #1e1b37;
+  color: rgba(255, 255, 255, 0.6);
+  .cs-widget_title {
+    color: #fff;
+  }
+  hr {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .cs-footer.cs-style4 .cs-footer_col:first-child {
+    margin-right: 5.5%;
+  }
+  .cs-footer.cs-style4 .cs-copyright-wrap {
+    padding-left: 43%;
+    margin-top: -80px;
+    height: 80px;
+  }
+  .cs-footer.cs-style1 {
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-footer_newsletter.cs-style1 .cs-footer_newsletter_form {
+    margin: 0;
+    max-width: 100%;
+  }
+  .cs-footer_newsletter.cs-style1 {
+    max-width: 550px;
+  }
+  .cs-footer .container {
+    max-width: 100%;
+  }
+  .cs-footer.cs-style1 .cs-copyright {
+    padding: 22px 0;
+  }
+  .cs-footer.cs-style1 .cs-widget_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .cs-footer.cs-style1 .cs-copyright {
+    font-size: 100%;
+  }
+  .cs-footer.cs-style3 .cs-widget_title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .cs-footer.cs-style1.cs-type1 .cs-widget_title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .cs-footer.cs-style2 {
+    .cs-footer_newsletter.cs-style1 {
+      padding: 70px 0;
+      flex-direction: column;
+      max-width: 100%;
+      .cs-footer_newsletter_title {
+        font-size: 40px;
+        margin: 0px 0px 10px 0;
+        text-align: center;
+      }
+    }
+  }
+  .cs-footer.cs-style4 {
+    .cs-footer_col {
+      padding-top: 60px;
+      padding-bottom: 105px;
+    }
+    .cs-footer_col:first-child {
+      margin-right: 0;
+      width: 100%;
+      flex: none;
+    }
+    .cs-address_widgert {
+      padding-bottom: 53px;
+    }
+    .cs-copyright-wrap {
+      padding-left: 0;
+      .cs-copyright {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .cs-footer.cs-style1 .cs-widget_title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .cs-footer.cs-style2 .cs-copyright .container {
+    flex-direction: column;
+  }
+  .cs-footer.cs-style2 .menu li:not(:first-child) {
+    margin-left: 20px;
+  }
+  .cs-footer.cs-style4 {
+    .cs-address_widgert .cs-footer_logo {
+      margin-bottom: 30px;
+    }
+    .cs-widget_title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  }
+  .cs-footer.cs-style2 .cs-copyright_in {
+    text-align: center;
+  }
+  .cs-footer.cs-style2 .menu {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-footer.cs-style4 {
+    .cs-footer_col {
+      flex: none;
+      width: 100%;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+    .cs-copyright-wrap {
+      margin-top: 0;
+    }
+    .cs-footer_col:first-child:before {
+      display: none;
+    }
+    .cs-address_widgert {
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+    .cs-footer_row {
+      padding-bottom: 20px;
+      padding-top: 80px;
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  .cs-footer.cs-style2 .menu li:not(:first-child) {
+    margin-left: 15px;
+  }
+}

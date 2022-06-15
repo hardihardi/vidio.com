@@ -1,0 +1,74 @@
+/*--------------------------------------------------------------
+24. Gallery
+----------------------------------------------------------------*/
+.cs-gallery.cs-style1 {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .cs-gallery_hover {
+    position: absolute;
+    height: calc(100% - 70px);
+    width: calc(100% - 70px);
+    left: 35px;
+    top: 35px;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.5s ease;
+    .cs-add {
+      display: block;
+      height: 70px;
+      width: 68px;
+      border: 1px solid #fff;
+      position: relative;
+      &:before,
+      &:after {
+        content: "";
+        height: 1px;
+        width: 35px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-color: #fff;
+        margin-left: -17px;
+      }
+      &:before {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &:hover {
+    .cs-gallery_hover {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+.cs-gallery_height1 {
+  height: 380px;
+}
+.cs-gallery_height2 {
+  height: 320px;
+}
+.cs-gallery_height3 {
+  height: 400px;
+}
+.cs-gallery_height4 {
+  height: 325px;
+}
+.cs-gallery_height5 {
+  height: 330px;
+}
+.cs-gallery_height6 {
+  height: 250px;
+}
+.cs-gallery_height7 {
+  height: 300px;
+}
+.cs-gallery_height8 {
+  height: 410px;
+}
+.cs-gallery_height9 {
+  height: 350px;
+}

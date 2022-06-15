@@ -1,0 +1,120 @@
+/*--------------------------------------------------------------
+42. Video Block
+----------------------------------------------------------------*/
+.cs-video_block.cs-style1 {
+  display: block;
+  height: 510px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  div:not(.cs-shape),
+  .cs-video_block_in {
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cs-video_block_in {
+    border-radius: inherit;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cs-shape {
+    position: absolute;
+    height: 350px;
+    width: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -110px;
+    background-image: radial-gradient(rgba($white, 0.15) 15%, transparent 15%);
+    background-size: 10px 10px;
+    background-position: 0 0;
+  }
+}
+
+.cs-video_block.cs-style2 {
+  border-width: 10px;
+  border-style: solid;
+  border-radius: 20px;
+  height: 440px;
+  position: relative;
+  border-color: #534c93;
+  .cs-video_block_in {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      border-radius: inherit;
+      background-color: currentColor;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+  .cs-player_btn.cs-style1 {
+    height: 85px;
+    width: 85px;
+    .cs-player_btn_in {
+      font-size: 20px;
+    }
+  }
+
+  .cs-video-shap {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    top: -52px;
+    right: -60px;
+    z-index: -1;
+    background-image: radial-gradient(currentColor 15%, transparent 15%);
+    background-size: 10px 10px;
+    background-position: 0 0;
+    opacity: 0.2;
+    animation: shapAnimation1 10s alternate infinite linear;
+  }
+  &.cs-type1 {
+    margin-left: 40px;
+  }
+}
+.cs-video_block.cs-style3 {
+  .cs-player_btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    height: 140px;
+    width: 140px;
+    box-shadow: 0px 10px 60px 0px rgba(41, 36, 7, 0.5);
+    border-radius: 50%;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-video_block.cs-style2.cs-type1 {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+  .cs-video_block.cs-style3 .cs-player_btn {
+    font-size: 20px;
+    height: 80px;
+    width: 80px;
+  }
+}

@@ -1,0 +1,441 @@
+/*--------------------------------------------------------------
+35. Product
+----------------------------------------------------------------*/
+.cs-product.cs-style1 {
+  box-shadow: 0px 1px 1.96px 0.04px rgba(147, 155, 98, 0.2);
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+  &:hover {
+    box-shadow: 0px 10px 40px 0px rgba(147, 155, 98, 0.3);
+    .cs-product_toolbox {
+      right: 0;
+    }
+  }
+  .cs-product_title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .cs-product_meta {
+    font-size: 16px;
+    line-height: 1.6em;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cs-product_info {
+    padding: 20px;
+    border-width: 0;
+    border-top-width: 1px;
+    border-style: solid;
+  }
+  .cs-product_thumb {
+    height: 260px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cs-product_img {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  .cs-product_badge {
+    position: absolute;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding: 3px 10px;
+    border-radius: 0 5px 5px 0;
+    top: 25px;
+    left: 0;
+    z-index: 2;
+  }
+  .cs-product_btn {
+    display: flex;
+    align-items: center;
+    i {
+      margin-right: 8px;
+    }
+  }
+  .cs-product_toolbox {
+    position: absolute;
+    right: -45px;
+    width: 45px;
+    height: 152px;
+    border-radius: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+    a {
+      padding: 4px 5px;
+    }
+  }
+  .cs-product_toolbox_in {
+    border-radius: 30px 0 0 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.cs-product.cs-style2,
+.cs-product.cs-style3 {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  .cs-product_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+  .cs-product_info {
+    position: relative;
+    z-index: 1;
+  }
+  .cs-product_btn {
+    line-height: 1.6em;
+    display: inline-block;
+    box-shadow: 0px 10px 60px 0px rgba(69, 32, 21, 0.2);
+  }
+  &:hover {
+    .cs-product_bg {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.cs-product.cs-style2 {
+  min-height: 350px;
+  align-items: center;
+  padding: 40px 60px;
+  .cs-product_info {
+    max-width: 50%;
+  }
+  .cs-product_title {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+  .cs-product_btn {
+    font-size: 16px;
+    padding: 0.45em 1.8em;
+  }
+  .cs-previous_price {
+    color: #5d6433;
+    text-decoration: line-through;
+    margin-right: 15px;
+  }
+
+  .cs-product_badge {
+    font-size: 16px;
+    background-color: #5d6433;
+    border-radius: 5px;
+    padding: 4px 13px;
+    display: inline-block;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+  }
+  .cs-product_price {
+    margin-bottom: 15px;
+  }
+  &.cs-type1 {
+    justify-content: flex-end;
+    .cs-product_badge {
+      background-color: #b24626;
+    }
+    .cs-previous_price {
+      color: #b24626;
+    }
+  }
+}
+.cs-product.cs-style3 {
+  min-height: 700px;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 90px 40px;
+  .cs-product_info {
+  }
+  .cs-product_btn {
+    padding: 0.6em 2.5em;
+  }
+  .cs-product_title {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+  .cs-product_subtitle {
+    font-size: 30px;
+    line-height: 1.4em;
+    margin-bottom: 25px;
+  }
+}
+
+.cs-product.cs-style4 {
+  border-radius: 20px;
+  overflow: hidden;
+  display: block;
+  .cs-product_img {
+    height: 320px;
+    img {
+      transition: all 0.4s ease;
+    }
+  }
+  .cs-product_info {
+    display: flex;
+    justify-content: space-between;
+    padding: 26px 30px;
+    position: relative;
+    .cs-product_info_bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      opacity: 0.5;
+    }
+  }
+  .cs-product_title {
+    font-size: 24px;
+    margin: 0;
+  }
+  .cs-product_number {
+    font-size: 16px;
+  }
+  &:hover {
+    .cs-product_info_bg {
+      opacity: 1;
+    }
+    .cs-product_title,
+    .cs-product_number {
+      color: #fff;
+    }
+    .cs-product_img img {
+      transform: rotate(6deg);
+    }
+  }
+}
+
+.cs-product.cs-style5 {
+  border-radius: 0 50px;
+  padding: 1px 0;
+  margin-top: 110px;
+  transition: all 0.4s ease;
+
+  .cs-product_img {
+    margin-top: -110px;
+    display: block;
+
+    img {
+      border-radius: 50%;
+      box-shadow: 0px 10px 40px rgba(91, 39, 0, 0.2);
+    }
+  }
+
+  .cs-product_info {
+    padding: 35px 35px 26px;
+  }
+  .cs-product_price {
+    margin-bottom: 2px;
+  }
+
+  .cs-product_title {
+    font-size: 26px;
+    margin-bottom: 7px;
+  }
+
+  .cs-product_subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 7px;
+  }
+
+  &:hover {
+    background-color: $white;
+    box-shadow: 0px 20px 70px 0px rgba(1, 0, 98, 0.1);
+  }
+}
+
+.cs-product_group_1 {
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: repeat(2, 1fr);
+  .cs-product.cs-style3 {
+    grid-row: span 2;
+  }
+}
+
+.cs-product_details.cs-style1 {
+  padding-left: 60px;
+  .cs-product_review {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .cs-review {
+    margin-right: 10px;
+  }
+  .cs-product_price {
+    font-size: 30px;
+    line-height: 1.2em;
+    display: flex;
+  }
+  .cs-previous {
+    font-size: 18px;
+    margin-left: 8px;
+    text-decoration: line-through;
+    position: relative;
+    bottom: -3px;
+  }
+  .cs-product_color_varient {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    h4 {
+      margin: 0 30px 0 0;
+      font-size: 18px;
+    }
+  }
+  .cs-quantity_wrap {
+    display: flex;
+    align-items: center;
+    .cs-quantity {
+      margin-right: 25px;
+    }
+  }
+  .cs-btn.cs-style1 {
+    padding: 0.55em 1.5em;
+  }
+}
+
+.cs-product_tab.cs-style1 {
+  padding: 40px;
+  border-radius: 0 20px 20px 20px;
+  ul:not(.cs-details_list) {
+    list-style: none;
+    padding: 0;
+    li {
+      position: relative;
+      padding-left: 45px;
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 30px;
+        width: 30px;
+      }
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+  .cs-review {
+    margin-bottom: 10px;
+  }
+}
+
+.cs-table_product {
+  display: flex;
+  align-items: center;
+  .cs-table_row_close {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .cs-product_img {
+    margin-right: 30px;
+    width: 60px;
+    max-height: 80px;
+    img {
+      max-height: 100%;
+    }
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+    + .cs-product_meta {
+      margin-top: 5px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .cs-product_details.cs-style1 {
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .cs-product_group_1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .cs-product.cs-style3 .cs-product_title {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .cs-product.cs-style3 .cs-product_subtitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .cs-product_tab.cs-style1 {
+    padding: 20px;
+    border-radius: 0px 10px 10px;
+  }
+  .cs-table_product {
+    .cs-table_row_close {
+      margin-right: 10px;
+    }
+    .cs-product_img {
+      margin-right: 15px;
+      width: 40px;
+      max-height: 60px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-product.cs-style2 {
+    min-height: 250px;
+    padding: 40px 30px;
+  }
+  .cs-product.cs-style3 {
+    min-height: 450px;
+    padding: 40px 20px;
+  }
+  .cs-product.cs-style4 .cs-product_info {
+    padding: 18px 30px;
+  }
+  .cs-product.cs-style4 .cs-product_title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cs-product.cs-style2 .cs-product_btn {
+    font-size: 14px;
+    padding: 0.45em 1.2em;
+  }
+  .cs-product.cs-style2 .cs-product_title {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+  .cs-product.cs-style2 .cs-product_badge {
+    font-size: 14px;
+  }
+  .cs-product.cs-style2 {
+    padding: 30px 20px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .cs-product.cs-style3 .cs-product_title {
+    font-size: 26px;
+  }
+  .cs-product.cs-style3 .cs-product_subtitle {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+21. Menu Card
+----------------------------------------------------------------*/
+.cs-menu_card.cs-style1 {
+  display: flex;
+  align-items: center;
+  background-color: rgb(254, 242, 234);
+  border-radius: 85px 10px 10px 85px;
+  border: 2px solid #fff;
+
+  .cs-menu_card_img {
+    height: 176px;
+    width: 176px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 60px rgba(91, 39, 0, 0.2);
+    flex: none;
+    margin: -2px;
+    margin-right: 40px;
+
+    img {
+      border-radius: inherit;
+      border: 6px solid #fff;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.4s ease;
+    }
+  }
+
+  .cs-menu_card_right {
+    padding: 20px 30px 20px 0;
+  }
+
+  .cs-menu_card_title {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .cs-menu_card_subtitle {
+    font-size: 16px;
+  }
+
+  .cs-menu_card_meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .cs-menu_card_price {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  &:hover {
+    .cs-menu_card_img {
+      img {
+        transform: rotate(15deg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .cs-menu_card.cs-style1 {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    padding: 30px;
+    .cs-menu_card_right {
+      padding-bottom: 0;
+      width: 100%;
+      padding-right: 0;
+    }
+    .cs-menu_card_img {
+      margin: 0;
+    }
+  }
+}

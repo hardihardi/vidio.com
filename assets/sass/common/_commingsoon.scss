@@ -1,0 +1,44 @@
+/*--------------------------------------------------------------
+13. Commingsoon
+----------------------------------------------------------------*/
+.cs-comming_soon.cs-style1 {
+  min-height: 100vh;
+  height: 100%;
+
+  .cs-comming_soon_left,
+  .cs-comming_soon_right {
+    padding: 40px 35px;
+  }
+
+  .cs-comming_soon_logo {
+    img {
+      height: 75px;
+    }
+  }
+
+  .cs-comming_soon_title {
+    font-size: 52px;
+  }
+
+  .cs-footer_newsletter.cs-style1 .cs-footer_newsletter_form {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .cs-comming_soon.cs-style1 .cs-comming_soon_left,
+  .cs-comming_soon.cs-style1 .cs-comming_soon_right {
+    padding: 40px 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .cs-comming_soon.cs-style1 .cs-comming_soon_left {
+    display: none;
+  }
+  .cs-comming_soon.cs-style1 .cs-comming_soon_title {
+    font-size: 40px;
+  }
+  .cs-comming_soon.cs-style1 .cs-comming_soon_logo img {
+    height: 55px;
+  }
+}

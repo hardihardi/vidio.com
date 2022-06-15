@@ -1,0 +1,367 @@
+/*--------------------------------------------------------------
+18. Counter
+----------------------------------------------------------------*/
+.cs-counter_style1_wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+  .cs-counter {
+    margin-left: 7px;
+    margin-right: 7px;
+    margin-bottom: 15px;
+  }
+}
+
+.cs-counter.cs-style1 {
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 65, 46, 0.2);
+  padding: 26px 8px;
+
+  .cs-counter_number {
+    font-size: 42px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cs-counter_title {
+    font-size: 18px;
+    margin: 0;
+    color: $secondary;
+  }
+
+  .cs-counter_symble {
+    font-size: 28px;
+    position: relative;
+    top: -10px;
+  }
+}
+
+.cs-counter2-wrap {
+  padding-top: 1px;
+
+  .container {
+    margin-top: -100px;
+  }
+}
+
+.cs-counter.cs-style2 {
+  .cs-counter_icon {
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0px 10px 60px 0px rgba(46, 39, 0, 0.1);
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 72px;
+
+    svg {
+      height: 110px;
+      width: 110px;
+    }
+  }
+
+  .cs-counter_number {
+    font-size: 52px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cs-counter_title {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+}
+
+.cs-counter.cs-style3 {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 10px 60px 0px rgba(31, 28, 57, 0.1);
+  padding: 30px 0 25px;
+  transition: all 0.3s ease;
+
+  .cs-counter_icon {
+    border-radius: 50%;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    margin: auto;
+    margin-bottom: 18px;
+
+    &:after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: inherit;
+      opacity: 0.2;
+      transition: all 0.3s ease;
+    }
+
+    i,
+    svg {
+      position: relative;
+      z-index: 1;
+    }
+    svg {
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .cs-counter_number {
+    font-size: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -8px;
+  }
+
+  .cs-counter_title {
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 10px 80px 0px rgba(31, 28, 57, 0.2);
+    .cs-counter_icon {
+      color: $white;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+}
+.cs-counter_4_wrap {
+  border-radius: 30px;
+  margin-top: -125px;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0px 15px 80px 0px rgba(28, 24, 64, 0.25);
+}
+.cs-counter_4_wrap_in {
+  display: flex;
+  justify-content: space-around;
+  padding: 43px 0 53px;
+  border-radius: inherit;
+}
+.cs-counter.cs-style4 {
+  padding: 15px;
+  .cs-counter_number {
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+  .cs-counter_title {
+    font-size: 20px;
+    letter-spacing: 5px;
+    line-height: 1.6em;
+  }
+  .cs-counter_seperator {
+    width: 30px;
+    height: 2px;
+    margin: 8px auto 10px;
+  }
+}
+
+.cs-counter_5_wrap {
+  flex-wrap: wrap;
+  border-radius: 20px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1px;
+}
+.cs-counter.cs-style5 {
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  transition: all 0.3s ease;
+
+  .cs-counter_icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .cs-counter_number {
+    font-size: 48px;
+    margin: 0;
+    line-height: 1em;
+    margin-bottom: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .cs-counter_title {
+    font-size: 20px;
+    line-height: 1.4em;
+    margin-bottom: -6px;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Odometer */
+.odometer.odometer-auto-theme,
+.odometer.odometer-auto-theme .odometer-digit,
+.odometer.odometer-theme-default,
+.odometer.odometer-theme-default .odometer-digit {
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+  display: block;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner,
+.odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  backface-visibility: hidden;
+}
+
+.odometer.odometer-auto-theme .odometer-digit .odometer-value,
+.odometer.odometer-theme-default .odometer-digit .odometer-value {
+  display: block;
+  transform: translateZ(0);
+}
+
+.odometer.odometer-auto-theme
+  .odometer-digit
+  .odometer-value.odometer-last-value,
+.odometer.odometer-theme-default
+  .odometer-digit
+  .odometer-value.odometer-last-value {
+  position: absolute;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+  transition: transform 2s;
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating
+  .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-up.odometer-animating
+  .odometer-ribbon-inner {
+  transform: translateY(-100%);
+}
+
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating
+  .odometer-ribbon-inner,
+.odometer.odometer-theme-default.odometer-animating-down.odometer-animating
+  .odometer-ribbon-inner {
+  transition: transform 2s;
+  transform: translateY(0);
+}
+
+.odometer.odometer-auto-theme,
+.odometer.odometer-theme-default {
+  line-height: inherit;
+}
+
+.odometer.odometer-auto-theme .odometer-value,
+.odometer.odometer-theme-default .odometer-value {
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .cs-counter.cs-style3 .cs-counter_number {
+    font-size: 42px;
+    margin-bottom: -5px;
+  }
+
+  .cs-counter.cs-style3 .cs-counter_title {
+    font-size: 20px;
+  }
+  .cs-counter_4_wrap {
+    margin-top: 80px;
+  }
+  .cs-counter.cs-style4 {
+    padding: 10px;
+    .cs-counter_number {
+      font-size: 50px;
+      margin-bottom: 0;
+    }
+    .cs-counter_seperator {
+      height: 2px;
+      margin: 4px auto 10px;
+    }
+    .cs-counter_title {
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+  }
+  .cs-counter.cs-style2 {
+    .cs-counter_icon {
+      margin-bottom: 15px;
+    }
+    .cs-counter_number {
+      font-size: 42px;
+    }
+    .cs-counter_title {
+      font-size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-counter_4_wrap_in {
+    flex-wrap: wrap;
+    padding: 23px 0 33px;
+    .cs-counter.cs-style4 {
+      width: 50%;
+    }
+  }
+
+  .cs-counter.cs-style5 {
+    height: initial;
+    min-height: 200px;
+    .cs-counter_number {
+      font-size: 36px;
+    }
+    .cs-counter_title {
+      font-size: 18px;
+    }
+  }
+}

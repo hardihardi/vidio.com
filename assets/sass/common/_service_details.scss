@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+11. Service Details
+----------------------------------------------------------------*/
+.cs-service_details.cs-style1 {
+  .cs-service_details_title {
+    font-weight: 600;
+  }
+
+  .cs-service_details_img {
+    border: 10px solid $white;
+    border-radius: 5px;
+  }
+
+  .cs-service_details_text {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}

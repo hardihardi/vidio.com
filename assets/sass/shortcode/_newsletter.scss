@@ -1,0 +1,104 @@
+/*--------------------------------------------------------------
+30. Newsletter
+----------------------------------------------------------------*/
+.cs-newsletter.cs-style1 {
+  position: relative;
+  .cs-newsletter_input {
+    display: block;
+    width: 100%;
+    height: 70px;
+    border-radius: 2em;
+    border-width: 1px;
+    border-style: solid;
+    padding: 15px 40px;
+    transition: all 0.3s ease;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: currentColor;
+    }
+
+    &:-ms-input-placeholder {
+      color: currentColor;
+    }
+
+    &::placeholder {
+      color: currentColor;
+    }
+  }
+  .cs-newsletter_btn {
+    border: none;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    letter-spacing: 2px;
+    font-size: 24px;
+    padding: 13px 30px;
+    line-height: 1.25em;
+  }
+}
+.cs-newsletter.cs-style2 {
+  border-radius: 20px;
+  padding: 68px 30px;
+  margin-top: -130px;
+  .cs-newsletter_form,
+  .cs-newsletter_title {
+    position: relative;
+    z-index: 2;
+  }
+  .cs-newsletter_form {
+    box-shadow: 0px 1px 2px 0px rgba(1, 0, 94, 0.1);
+    max-width: 500px;
+    margin: auto;
+  }
+  .cs-newsletter_btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    width: 80px;
+    height: 40px;
+  }
+  .cs-newsletter_input {
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    height: 50px;
+    padding: 2px 30px 0;
+    border-radius: 25px;
+    color: #c6c5df;
+    font-size: 16px;
+    border: none;
+    background-color: #5e56a2;
+    transition: all 0.3s ease;
+    outline: none;
+    &::-webkit-input-placeholder {
+      color: currentColor;
+    }
+
+    &:-ms-input-placeholder {
+      color: currentColor;
+    }
+
+    &::placeholder {
+      color: currentColor;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-newsletter.cs-style2 .cs-newsletter_title {
+    font-size: 32px;
+  }
+  .cs-newsletter.cs-style1 {
+    .cs-newsletter_input {
+      height: 60px;
+      padding: 10px 25px;
+    }
+    .cs-newsletter_btn {
+      letter-spacing: 1px;
+      font-size: 18px;
+      padding: 11px 25px;
+      line-height: 1.25em;
+    }
+  }
+}

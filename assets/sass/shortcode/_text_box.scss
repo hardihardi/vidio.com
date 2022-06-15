@@ -1,0 +1,166 @@
+/*--------------------------------------------------------------
+40. Text Box
+----------------------------------------------------------------*/
+.cs-text_box.cs-style1 {
+  .cs-text_box_subtitle {
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 3px;
+    line-height: 1.2em;
+    margin-bottom: 11px;
+  }
+
+  .cs-text_box_title {
+    font-size: 52px;
+    margin-bottom: 0px;
+    line-height: 1.17em;
+  }
+
+  .cs-text_box_text {
+    margin-bottom: 0px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .cs-text_box_list {
+    font-size: 20px;
+    line-height: 1.6em;
+
+    i {
+      margin-right: 20px;
+    }
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .cs-text_icon_box {
+    display: flex;
+    align-items: center;
+
+    .cs-text_box_icon {
+      margin-right: 15px;
+      font-size: 20px;
+    }
+
+    .cs-text_box_icon_title {
+      font-size: 20px;
+      line-height: 1.5em;
+      margin: 0;
+    }
+  }
+
+  .cs-text_box_footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .cs-text_box_btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -15px;
+
+    .cs-btn {
+      margin-bottom: 15px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  .cs-text_box_separetor {
+    display: block;
+    height: 4px;
+    width: 50px;
+  }
+
+  &.cs-type1 {
+    .cs-text_box_subtitle {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+    .cs-text_icon_box .cs-text_box_icon {
+      height: 36px;
+      width: 36px;
+      border-radius: 5px;
+    }
+    h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &.cs-size1,
+  &.cs-size2 {
+    .cs-text_box_subtitle {
+      text-transform: uppercase;
+      font-size: 18px;
+      letter-spacing: 2px;
+      line-height: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .cs-text_box_title {
+      font-size: 48px;
+      line-height: 1.22em;
+    }
+  }
+
+  &.cs-size2 {
+    .cs-text_box_subtitle {
+      font-size: 24px;
+    }
+  }
+
+  &.cs-size3 {
+    .cs-text_box_title {
+      font-size: 42px;
+      line-height: 1.2em;
+    }
+    .cs-text_box_separetor {
+      margin-top: 3px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-text_box.cs-style1 .cs-text_box_subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .cs-text_box.cs-style1 .cs-text_box_title {
+    font-size: 40px !important;
+    line-height: 1.2em !important;
+  }
+  .cs-text_box.cs-style1.cs-type1 .cs-text_box_subtitle {
+    font-size: 18px;
+  }
+  .cs-text_box.cs-style1 .cs-text_box_list {
+    font-size: 18px;
+  }
+  .cs-text_box.cs-style1.cs-size2 .cs-text_box_subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-text_box.cs-style1 .cs-text_box_title {
+    font-size: 36px !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cs-text_box.cs-style1 .cs-text_box_footer {
+    flex-direction: column;
+    align-items: flex-start;
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

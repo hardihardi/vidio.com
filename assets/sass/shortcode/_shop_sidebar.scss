@@ -1,0 +1,224 @@
+/*--------------------------------------------------------------
+36. Shop Sidebar
+----------------------------------------------------------------*/
+.cs-shop_sidebar.cs-style1 {
+  border-radius: 10px;
+  box-shadow: 0px 1px 1.96px 0.04px rgba(147, 155, 98, 0.2);
+  .cs-shop_widget_title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .menu {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+  .cs-shop_widget {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    padding: 30px 30px;
+    &:last-child {
+      border: none;
+    }
+  }
+}
+.cs-shop_size {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  span {
+    height: 40px;
+    width: 40px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 5px;
+    cursor: pointer;
+  }
+}
+
+.cs-shop_colors {
+  display: flex;
+  span {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin: 5px;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      height: calc(100% + 6px);
+      width: calc(100% + 6px);
+      top: -3px;
+      left: -3px;
+      border-radius: inherit;
+      box-shadow: 0px 1px 1px 0px rgba(2, 0, 120, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    &.active {
+      &:after {
+        box-shadow: 0px 4px 15px 0px rgba(2, 0, 120, 0.15);
+      }
+    }
+    &:hover {
+      &:after {
+        box-shadow: 0px 4px 15px 0px rgba(2, 0, 120, 0.15);
+      }
+    }
+    &.cs-color1 {
+      background-color: #2c29f2;
+    }
+    &.cs-color2 {
+      background-color: #f22962;
+    }
+    &.cs-color3 {
+      background-color: #19d62a;
+    }
+    &.cs-color4 {
+      background-color: #ffb019;
+    }
+    &.cs-color5 {
+      background-color: #a912ff;
+    }
+    &.cs-color6 {
+      background-color: #14b8fd;
+    }
+  }
+}
+
+.ui-widget-header {
+  border: none;
+}
+.ui-widget.ui-widget-content {
+  border: none;
+  height: 8px;
+}
+
+.ui-slider .ui-slider-handle {
+  width: 16px;
+  height: 16px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -4px;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-slider .ui-state-focus,
+.ui-slider .ui-state-active {
+  border-radius: 50%;
+  border-width: 3px;
+  outline: none;
+}
+
+.cs-short_left {
+  line-height: 50px;
+}
+
+.cs-range_value_in {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+input#amount {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.cs-range_btn {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  line-height: 1.6em;
+  padding: 3px 10px;
+  border-radius: 5px;
+  display: inline-flex;
+}
+.cs-range_value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  label {
+    margin-right: 4px;
+  }
+}
+.cs-short_head {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.select2-container {
+  min-width: 300px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: inherit;
+  line-height: 50px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.select2-container .select2-selection--single {
+  height: 50px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  margin-left: -6px;
+  margin-top: -3px;
+  border-width: 7px 6px 0 6px;
+}
+.select2-container--default.select2-container--open
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  border-width: 0 6px 7px 6px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 50px;
+  top: 0px;
+  right: 0;
+  width: 40px;
+}
+
+.select2-results__option {
+  padding: 0px 20px;
+  line-height: 45px;
+}
+
+.select2-search--dropdown {
+  padding: 10px;
+}
+
+.select2-search--dropdown .select2-search__field {
+  padding: 5px 12px;
+  outline: none;
+  border-radius: 5px;
+}
+
+.cs-checkout_select {
+  .select2-container {
+    width: 100% !important;
+  }
+  .select2-container .select2-selection--single,
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 45px;
+  }
+  .select2-container--default
+    .select2-selection--single
+    .select2-selection__rendered {
+    line-height: 45px;
+  }
+}

@@ -1,0 +1,61 @@
+/*--------------------------------------------------------------
+29. Logo Carousel
+----------------------------------------------------------------*/
+.cs-logo_carousel.cs-style1 {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease;
+
+  img + img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    opacity: 0;
+    transition: inherit;
+    z-index: 1;
+  }
+
+  &:hover {
+    img + img {
+      opacity: 1;
+    }
+  }
+}
+
+.cs-logo_carousel2_wrap {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cs-logo_carousel.cs-style2 {
+  height: 180px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cs-logo_carousel.cs-style3 {
+  border-radius: 10px;
+  height: 150px;
+  box-shadow: 0px 8px 30px 0px rgba(18, 13, 65, 0.2);
+}
+
+@media screen and (max-width: 1199px) {
+  .cs-logo_carousel2_wrap {
+    grid-gap: 20px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .cs-logo_carousel2_wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-logo_carousel.cs-style2 {
+    height: 120px;
+  }
+}

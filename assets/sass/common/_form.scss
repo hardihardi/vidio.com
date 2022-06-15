@@ -1,0 +1,208 @@
+/*--------------------------------------------------------------
+12. Form
+----------------------------------------------------------------*/
+.cs-form_label {
+  display: block;
+  font-size: 16px;
+  line-height: 1.6em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: $primary;
+}
+
+.cs-form_field {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-width: 1px;
+  border-style: solid;
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-control {
+  padding-left: 26px;
+}
+
+.cs-form.cs-style1 {
+  border-radius: 30px;
+  background-color: $white;
+  box-shadow: 0px 20px 100px 0px rgba(9, 38, 49, 0.2);
+
+  .cs-form_title {
+    font-size: 40px;
+  }
+
+  .cs-form_footer {
+    font-size: 20px;
+    padding: 0 30px;
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: "";
+        height: 2px;
+        background-color: currentColor;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        transform-origin: right center;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scaleX(0);
+      }
+
+      &:hover {
+        &:after {
+          opacity: 1;
+          transform-origin: left center;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+  .cs-form_body {
+    padding: 0 40px;
+  }
+
+  .cs-btn.cs-style2 {
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 13px 50px;
+  }
+
+  .cs-form_field {
+    padding: 11px 20px;
+  }
+
+  .cs-social_box {
+    display: flex;
+    align-items: center;
+  }
+
+  .cs-form_meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 2px 0;
+
+    a {
+      display: inline-block;
+      position: relative;
+
+      &:before {
+        content: "";
+        height: 1px;
+        background-color: currentColor;
+        width: 100%;
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        transform-origin: right center;
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: scaleX(0);
+      }
+
+      &:hover {
+        &:before {
+          opacity: 1;
+          transform-origin: left center;
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+
+.cs-checkbox,
+.cs-radio {
+  position: relative;
+  cursor: pointer;
+  label {
+    position: relative;
+    padding-left: 30px;
+    margin: 0;
+    &:before {
+      content: "";
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      border: 1px solid currentColor;
+      top: 4px;
+      left: 0;
+      border-radius: 3px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      height: 8px;
+      width: 8px;
+      border-radius: 2px;
+      background-color: currentColor;
+      left: 5px;
+      top: 9px;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.3s ease;
+    }
+    a {
+      text-decoration: underline;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+    &:checked {
+      + label {
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+.cs-radio {
+  label {
+    &:before,
+    &:after {
+      border-radius: 50%;
+    }
+  }
+}
+.cs-form_group {
+  padding: 25px 30px 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0 6px 6px;
+}
+
+.cs-radio_boxes {
+  display: flex;
+  margin-bottom: -1px;
+  .cs-radio {
+    padding: 10px 25px;
+    border-width: 1px 1px 0 1px;
+    border-radius: 6px 6px 0 0;
+    &:first-child {
+      border-style: solid;
+    }
+  }
+}

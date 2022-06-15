@@ -1,0 +1,98 @@
+/*--------------------------------------------------------------
+28. Info Card
+----------------------------------------------------------------*/
+.cs-info_card.cs-style2 {
+  position: relative;
+  .cs-info_card_bg {
+    position: absolute;
+    height: 100%;
+    width: 81%;
+    left: 0;
+    top: 0;
+  }
+
+  .cs-info_card_in {
+    width: 525px;
+    margin-left: auto;
+    margin-right: -10%;
+    box-shadow: 0px 20px 80px 0px rgba(46, 20, 0, 0.15);
+    border-radius: 0 60px 0 60px;
+    padding: 55px 50px 65px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cs-info_card_heading {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+
+  .cs-info_card_list {
+    margin-bottom: 43px;
+
+    li:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    .cs-info_card_title {
+      font-size: 24px;
+      color: #3c3c78;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .cs-info_card_subtitle {
+      font-size: 20px;
+      line-height: 1.4em;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .cs-info_card.cs-style2 .cs-info_card_in {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .cs-info_card.cs-style2 .cs-info_card_in {
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cs-info_card.cs-style2 .cs-info_card_bg {
+    width: 100%;
+  }
+
+  .cs-info_card.cs-style2 .cs-info_card_in {
+    margin-right: auto;
+    transform: initial !important;
+  }
+  .cs-info_card.cs-style2 .cs-info_card_heading {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .cs-info_card.cs-style2 .cs-info_card_in {
+    width: 100%;
+    border-radius: 0 40px 0 40px;
+    padding: 45px 30px 45px;
+  }
+  .cs-info_card.cs-style2 .cs-info_card_list .cs-info_card_subtitle {
+    font-size: 18px;
+  }
+  .cs-info_card.cs-style2 .cs-info_card_list li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .cs-info_card.cs-style2 .cs-info_card_heading {
+    margin-bottom: 25px;
+  }
+  .cs-info_card.cs-style2 .cs-info_card_list {
+    margin-bottom: 35px;
+  }
+  .cs-info_card.cs-style2 .cs-info_card_heading {
+    font-size: 36px;
+  }
+}
