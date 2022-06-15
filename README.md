@@ -6,5 +6,6 @@
 <p>DOWNLOAD APLIKASI DI IOS DAN ANDROID</p>
 <p>Nikmati pengalaman yang lebih seru bersama Vidio Kapan saja dimana saja. Jelajahi dan tonton acara serta vidio favoritmu.</p>
 <p>Dapatkan juga fitur-fitur seru yang hanya ada di aplikasi Vidio!</p>
-<h3 href="https://app.vidio.com/entrypoint-burgermenu"><img src="https://github.com/hardihardi/vidio.com/blob/master/assets/img/play%20store.png" /></h3>
+<h3 href="https://app.vidio.com/entrypoint-burgermenu"><img src="https://github.com/hardihardi/vidio.com/blob/master/assets/img/play%20store.png" />
+<img src="" />
 <button type="button" class="btn btn-danger"><a href="https://vidiocom.netlify.app/">Preview</a></button>
