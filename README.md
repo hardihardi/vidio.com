@@ -1,4 +1,4 @@
-<h3 align="center">Vidio.com App Landing- Unofficial</h3>
+<h3 align="center">Vidio.com App Landing - Unofficial</h3>
 <p align="center">Ribuan Tayangan Unggulan, Semua Ada di Vidio.</p>
 <img src="https://github.com/hardihardi/vidio.com/blob/master/assets/img/vidio.com.jpg" />
 <p>App Landing - Vidio.com Live Streaming TV Lengkap - Siaran Langsung TV Nasional</p>
